@@ -1,0 +1,33 @@
+<!-- app.component.html -->
+
+<ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Naftra</ion-title>
+      </ion-toolbar>
+      <ion-segment value="{{ currentView }}">
+        <ion-segment-button value="artistas" (click)="showArtistas()">
+          <ion-label>Artistas</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="usuarios" (click)="showUsuarios()">
+          <ion-label>Usuarios</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="favoritos" (click)="showUsuarios()">
+          <ion-label>Favoritos</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-header>
+  
+    <ion-content>
+      <ng-container *ngIf="currentView === 'artistas'">
+        <app-artista-list></app-artista-list>
+      </ng-container>
+      <ng-container *ngIf="currentView === 'usuarios'">
+        <app-usuario-list></app-usuario-list>
+      </ng-container>
+      <!-- <ng-container *ngIf="currentView === 'favoritos'">
+        <app-favorito-list></app-favorito-list>
+      </ng-container> -->
+    </ion-content>
+  </ion-app>
+  

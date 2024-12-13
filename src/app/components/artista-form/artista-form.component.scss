@@ -1,0 +1,96 @@
+// Estilos principales del header
+ion-header {
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #6d6875;
+  
+    ion-toolbar {
+      display: flex;
+      justify-content: center; // Centramos todo
+      align-items: center;
+      padding: 1rem;
+  
+      ion-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #b084c6; // Lila para destacar
+        text-transform: uppercase;
+      }
+  
+      ion-buttons {
+        position: absolute;
+        right: 1rem;
+  
+        ion-button {
+          --background: #a947ffcb;
+          color: #fff;
+  
+          ion-icon {
+            margin-right: 0;
+          }
+  
+          &:hover {
+            --background: #5a5564;
+          }
+        }
+      }
+    }
+  }
+  
+  // Estilos principales del contenido
+  ion-content {
+    background-color: #121212;
+    color: #fff;
+    padding: 2rem;
+  
+    form {
+      display: grid; // Diseño innovador con grid
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  
+      ion-item {
+        --background: transparent;
+        border: 1px solid #6d6875;
+        border-radius: 0.8rem;
+  
+        ion-label {
+          color: #b084c6; // Lila para los labels
+          font-weight: bold;
+        }
+  
+        ion-input {
+          --background: transparent;
+          --color: #fff;
+          --placeholder-color: #c9a4d9; // Placeholder lila
+          padding: 0.8rem;
+        }
+      }
+  
+      ion-select {
+        --background: #1e1e1e;
+        --color: #fff;
+        border: 1px solid #6d6875;
+        border-radius: 0.8rem;
+  
+        ion-select-option {
+          --color: #fff;
+        }
+      }
+  
+      ion-button {
+        --background: #a947ffcb;
+        --color: #fff;
+        border-radius: 0.8rem;
+        font-weight: bold;
+        padding: 1rem;
+  
+        &:disabled {
+          --background: #444;
+          --color: #888;
+        }
+      }
+    }
+  }
